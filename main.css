@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 body {
     width: 400px;
     margin: 30px auto;
@@ -14,7 +16,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 40px;
-    background: silver;
+    background: rgb(186, 186, 186);
 }
 
 #calculator > * {
@@ -24,6 +26,10 @@ body {
     padding: 5px;
     border-radius: 10px;
     text-align: center;
+}
+
+#calculator > *:hover {
+    cursor: pointer;
 }
 
 #calculator_current, #calculator_result {

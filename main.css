@@ -24,28 +24,36 @@ body {
     padding: 5px;
     border-radius: 10px;
     text-align: center;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;      
 }
 
-#calculator_current, #calculator_result {
+#calculator > *:hover {
+    cursor: pointer;
+}
+
+.result {
+    text-align: right;
     grid-column-start: 1;
     grid-column-end: 5; 
 }
 
-#enter {
+.enter {
     grid-column-start: 4;
-    grid-row-start: 4;
+    grid-row-start: 3;
     grid-row-end: 6;
 }
 
-#backspace {
-    grid-column-start: 4;
+.backspace {
+    grid-column-start: 3;
     grid-row-start: 6;
     grid-row-end: 6;
 }
-#clean {
+.clean {
     grid-column-start: 4;
-    grid-row-start: 7;
-    grid-row-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 6;
 }
 
 

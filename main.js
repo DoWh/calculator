@@ -1,4 +1,4 @@
-function calculator(block) {
+function calculator1(block) {
     let flag = false;
     let calc = {};
     //console.log(this.getelementsbyclassname('result'));
@@ -66,6 +66,70 @@ function calculator(block) {
         }
     }
 }
+// calculator1(document.getElementById('calculator'));
+
+class Calculator{
+    constructor(setting){
+        this.setting = setting;
+    }
+    create_button(tag_type,tag_class,tag_innder = ''){
+        console.log(123);
+        let elem = document.createElement(tag_type);
+        elem.setAttribute('class',tag_class);
+        if (tag_innder != '') elem.innerHTML = tag_innder;
+        setting.block.append(elem);
+    }
+}
+
+function new_calculator(setting){
+    let calculator = new Calculator(setting);
+    console.log(setting.block);
+    //create buttons
+    calculator.create_button('input','result');
+    calculator.create_button('div','plus','+');
+    calculator.create_button('div','minus','-');
+    calculator.create_button('div','multiply','*');
+    calculator.create_button('div','divide','-');
+    calculator.create_button('div','n_1 num','1');
+    calculator.create_button('div','n_2 num','2');
+    calculator.create_button('div','n_3 num','3');
+    calculator.create_button('div','n_4 num','4');
+    calculator.create_button('div','n_5 num','5');
+    calculator.create_button('div','n_6 num','6');
+    calculator.create_button('div','n_7 num','7');
+    calculator.create_button('div','n_8 num','8');
+    calculator.create_button('div','n_9 num','9');
+    calculator.create_button('div','n_0 num','0');
+    calculator.create_button('div','enter','enter');
+    calculator.create_button('div','clean','clean');
+    calculator.create_button('div','backspace','backspace');
+    // let buttons = [
+    //     'div','plus','+'
+    //     'div','minus','-'
+    //     'div','multiply','*'
+    //     'div','divide','/'
+    //     'div','n_1 num','1'
+    //     'div','n_2 num','2'
+    //     'div','n_3 num','3'
+    //     'div','n_4 num','4'
+    //     'div','n_5 num','5'
+    //     'div','n_6 num','6'
+    //     'div','n_7 num','7'
+    //     'div','n_8 num','8'
+    //     'div','n_9 num','9'
+    //     'div','n_0 num','0'
+    //     'div','enter',
+    //     'div','clean',
+    //     'div','backspace',
+    // ]
+}
 
 
-calculator(document.getElementById('calculator'));
+let setting = {
+    block: document.getElementById('calculator'),
+    width: null,
+    height: null,
+    style: null,
+    history: null,
+}
+console.log(new_calculator(setting));
